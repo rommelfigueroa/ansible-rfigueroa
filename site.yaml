@@ -1,0 +1,13 @@
+---
+- name: My First Playbook
+  hosts: tags_Name_rfigueroa*
+  become: true
+  gather_facts: true
+  vars_files:
+    - "vars.yaml"
+
+  roles:
+    - first_role
+    - second_role
+    # - debug: msg="{{ ansible_cmdline.BOOT_IMAGE }}" # Jinja templating
+

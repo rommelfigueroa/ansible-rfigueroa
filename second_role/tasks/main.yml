@@ -1,0 +1,14 @@
+---
+# tasks file for second_role
+- name: add several rules to a group
+  user:
+    name: "{{item}}"
+    state: present
+    group: "wheel"
+  loop:
+    - rfigueroa
+    - bvanek
+    - nlaws
+    - ethomas
+    - bblue
+    - mcastro
